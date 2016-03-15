@@ -8,6 +8,7 @@ module.exports = function(sequelize, DataTypes) {
     image: DataTypes.STRING,
     genre: DataTypes.STRING
   });
-  Book.belongsToMany(User, {through:'UserBook'});
+  // Book.belongsToMany(models.User, {through: UserBooks});
+  console.log("BOOKS");
   return Book;
 };

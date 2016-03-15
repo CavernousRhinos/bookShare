@@ -24,3 +24,5 @@ models.sequelize.sync().then(function () {
     console.log('Express server listening on port ' + server.address().port);
   });
 });
+
+// User.create({name: "Bob", email: "bob@123.com", passwordHash: "falafel"});

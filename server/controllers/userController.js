@@ -15,8 +15,8 @@ module.exports.addUser =function(req, res){
   });
 };
 
-module.exports.login = function(req, res){
-    user.login(req.body.email, req.body.password, function(err, data){
+module.exports.signIn = function(req, res){
+    User.signIn(req.body.email, req.body.password, function(err, data){
       if(err){
         return res.status(500).json(err);
       } else {
@@ -27,5 +27,18 @@ module.exports.login = function(req, res){
 };
 
 module.exports.logout = function(req, res){
-// TODO: logout functionality
+// TODO
 };
+
+module.exports.addFriend= function(req, res){
+// TODO
+};
+
+module.exports.viewAllFriends= function(req, res){
+// TODO
+};
+
+module.exports.viewFriend= function(req, res){
+// TODO
+};
+
