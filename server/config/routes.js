@@ -6,7 +6,13 @@ module.exports = function (app, express) {
   /*User Routes*/
   app.post('/api/signup', userController.addUser);
   app.post('/api/signIn', userController.signIn);
+
+  app.use(helpers.decode);
+
   app.post('/api/logout', userController.logout);
+
+  // TODO: security admin or currentUser access only for delete
+  // app.delete('/api/users/:id', userController.deleteUser);
 
   /*Friend Routes?*/
   app.post('/api/friends', userController.addFriend);

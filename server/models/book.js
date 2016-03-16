@@ -9,8 +9,11 @@ module.exports = function(sequelize, DataTypes) {
     genre: DataTypes.STRING
   }, {
     classMethods: {
-        associate: function(models){
-          Book.belongsToMany(models.User, {through:'UserBook', foreignKey: 'Book_userId'});
+      viewMyShelf: function(){}, //TODO
+      viewFriendsBooks: function(){}, //TODO
+      deleteBook: function(){}, //TODO
+      associate: function(models){
+        Book.belongsToMany(models.User, {through:'UserBook', foreignKey: 'Book_userId'});
       }
     }
   });

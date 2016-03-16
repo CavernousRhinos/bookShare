@@ -1,6 +1,9 @@
 var jwt = require('jwt-simple');
 var secret = 'unicorn';
 
+var models = require('../models');
+var User = models.User;
+
 module.exports = {
   errorLogger: function (error, req, res, next) {
     console.error(error.stack);
@@ -20,17 +23,25 @@ module.exports = {
     var token = req.headers['authorization'];
     var user;
 
-    if (!token) {
-      return res.send(403);
-    }
+    // if (!token) {
+    //   return res.send(403);
+    // }
 
     try {
-      user = jwt.decode(token, secret);
+      // user = jwt.decode(token, secret);
+      user = {id: 6}; // test data
+
       if (user === undefined || user.id === undefined) {
         return res.status(401).json({error: 'invalid token', user: user});
       }
-      req.user = user;
-      next();
+      req.decodedToken = user;
+
+      User.findAll({where: {id: req.decodedToken.id}}).then(function(users) {
+        req.currentUser = users[0];
+        next();
+      }).catch(function(err) {
+        return res.send(403);
+      });
     } catch (error) {
       return next(error);
     }
