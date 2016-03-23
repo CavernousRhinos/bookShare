@@ -1,5 +1,5 @@
 import {searchGoogleBooksAJAX} from './searchBooks';
-import {asyncSignIn, getMyBooksAJAX} from './helpers/serverCalls';
+import {asyncSignIn, getMyBooksAJAX, getMyFriendsAJAX} from './helpers/serverCalls';
 
 export function setState(state){
   return {
@@ -89,6 +89,8 @@ export function facebookLogin(){
 
 /* -------- DASHBOARD ACTIONS  -------- */
 
+
+
 export function setFoundBooks(foundBooks){
   return {
     type: 'SET_FOUND_BOOKS',
@@ -103,7 +105,7 @@ export function searchBooks(query){
   }
 }
 
-/* Get books that I own action*/
+/* Get books that I own async actions */
 export function getMyBooks(){
   return function (dispatch){
     dispatch(startGettingMyBooks());
@@ -125,6 +127,32 @@ export function finishGettingMyBooks(books){
   }
 }
 
+/* Get my friend async actions */
+
+export function getMyFriends(){
+  return function(dispatch){
+    dispatch(startGettingMyFriends());
+    return getMyFriendsAJAX((response) => {
+      console.log('GOT FRIENDS');
+      console.log(response);
+      dispatch(finishGettingMyFriends(response));
+    });
+  }
+}
+
+export function startGettingMyFriends(){
+  return {
+    type: 'START_GET_MY_FRIENDS'
+  }
+}
+
+export function finishGettingMyFriends(friends){
+  return {
+    type: 'FINISH_GET_MY_FRIENDS',
+    friends: friends
+  }
+}
+
 /* Search for books async actions  */
 export function addBookToMyShelf(book){
   return {
@@ -143,6 +171,7 @@ export function requestBooks(query){
 
 export function receiveBooks(books){
   console.log('RECEIVING BOOKS');
+  console.log(books);
   return {
     type: 'RECEIVE_BOOKS',
     books: books

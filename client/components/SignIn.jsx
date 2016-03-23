@@ -10,15 +10,9 @@ export const SignIn = class SignIn extends React.Component {
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
   }
   changeUsername(username){
-    this.setState({
-     username: username 
-    });
     this.props.setEmail(username);
   }
   changePassword(password){
-    this.setState({
-      password: password
-    })
     this.props.setPassword(password);
   }
   render() {
@@ -27,11 +21,17 @@ export const SignIn = class SignIn extends React.Component {
     <form>
       <table>
         <tr><td>User Name or Email</td></tr>
-        <tr><td><input onChange={(event) => this.changeUsername(event.target.value)} type="text" name="username" placeholder="Please enter your username"/></td></tr>
+        <tr>
+          <td>
+            <input onChange={(event) => this.changeUsername(event.target.value)} type="text" name="username" placeholder="Please enter your username"/>
+            <label className="message error">Plase enter an username</label>
+          </td>
+        </tr>
         <tr><td>Password</td></tr>
         <tr>
           <td>
             <input onChange={(event)=>this.changePassword(event.target.value)} type="password" placeholder="Please enter your password"/>
+            <label className="message error">Plase enter a password</label>
           </td>
         </tr>
         <tr>
