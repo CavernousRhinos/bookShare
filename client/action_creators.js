@@ -1,9 +1,9 @@
 import {searchGoogleBooksAJAX} from './searchBooks';
 import {
-  asyncSignIn, 
-  getMyBooksAJAX, 
-  getMyFriendsAJAX, 
-  searchUsersAJAX, 
+  asyncSignIn,
+  getMyBooksAJAX,
+  getMyFriendsAJAX,
+  searchUsersAJAX,
   makeFriendRequestAsync,
   getMyFriendRequests,
   acceptFriendRequestAJAX,
@@ -323,7 +323,7 @@ export function borrowBook(data){
 export function startGettingExploreBooks(){
   return {
     type: 'START_GETTING_EXPLORE_BOOKS'
-  } 
+  }
 }
 
 
@@ -349,7 +349,7 @@ export function getExploreBooks(){
 export function startGettingBookRequestsToUser(){
   return {
     type: 'START_GETTING_BOOK_REQUESTS_TO_USER'
-  } 
+  }
 }
 
 
@@ -376,7 +376,7 @@ export function getBookRequestsToUser(){
 export function startAcceptingBookRequest(){
   return {
     type: 'START_ACCEPTING_BOOK_REQUEST'
-  } 
+  }
 }
 
 

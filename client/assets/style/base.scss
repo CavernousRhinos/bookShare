@@ -1,26 +1,94 @@
 @import 'reset';
-
 $primary-color: #333;
-$primary-font-color: black;
+$primary-font-color: #29293d;
 $error-color: red;
 $success-color: green;
 $alert-color: yellow;
+$input-width: 300px;
+$label-width: 100px;
+$segment: $input-width+$label-width+15px;
+
 
 *{
-  font-family: Arial;
+  font-family: "Courier New";
 }
 body {
-  // background-image: url('/assets/background2.jpg');
-  background-size: cover;
-  background-repeat: no-repeat; 
+  // background-image: url('/assets/redHeart.jpg');
+  background-size: cover; //affects view on dashboard
+  // min-width: 100%;
+  // min-height: 120%;
+  background-repeat: no-repeat;
 }
 
+/*Navigation Bar*/
+nav li{
+  display: inline-block;
+  padding: 0 20px;
+}
+nav ul{
+  float: left;
+}
 
+nav{
+  // background-color: #F0F8FF;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  color: #ffffff;
+  height: 20px;
+}
+nav a{
+ color: #ffffff;
+}
+
+/*FIXME: input goes to?*/
 input{
-  width: 400px;
+  width: 300px;
   padding: 5px;
   font-size: 16px;
 }
+
+/*Landing Page*/
+.signin,
+.signup {
+  form {
+    width: $segment;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+
+    div{
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    label{
+      display: inline-block;
+      width: 100px;
+    }
+    .submitBtn {
+      text-align: center;
+      input{
+        display: inline-block;
+        width: 125px;
+        font-family: "Courier New";
+
+      }
+    }
+  }
+}
+
+.tabBar{
+  width: $segment;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tab {
+  display: inline-block;
+  padding-right: 5px;
+}
+
 
 .message{
   font-size: 14px;
@@ -43,43 +111,20 @@ input{
   color: $alert-color;
 }
 
-nav li{
-  display: inline-block;
-  padding: 0 20px;
-}
-nav ul{
-  float: left;
-}
-
-nav{
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 10px;
-  color: $primary-font-color;
-  height: 20px;
-}
-nav a{
- color: $primary-font-color; 
-}
-.signin, .signin table{
-  width: 400px;
-  margin: 0 auto;
-}
-
 .hero{
   text-align: center;
   color: $primary-font-color;
   border-radius: 5px;
   width: 700px;
+  padding-left: 50px auto;
   margin: 50px auto;
   padding: 20px;
 }
-.hero h3, .hero h2{
-  margin: 10px;
-}
+
 .hero h1{
   font-size: 40px;
-
 }
+
 .book-entry{
   width: 250px;
   box-shadow: 5px 5px 5px #888888;
@@ -88,20 +133,25 @@ nav a{
   margin: 7px;
   border-radius: 5px;
 }
+
 .book-entry img{
   box-shadow: 5px 5px 5px #888888;
 }
+
 .book-list{
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
+
 .my-books preloader{
   width: 40px;
 }
+
 .requests-list li{
   width: 250px;
 }
+
 .requests-list{
   display: flex;
   flex-wrap: wrap;

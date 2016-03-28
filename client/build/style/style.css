@@ -6,16 +6,68 @@ ol {
   padding: 0; }
 
 * {
-  font-family: Arial; }
+  font-family: "Courier New"; }
 
 body {
   background-size: cover;
   background-repeat: no-repeat; }
 
+/*Navigation Bar*/
+nav li {
+  display: inline-block;
+  padding: 0 20px; }
+
+nav ul {
+  float: left; }
+
+nav {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  color: #ffffff;
+  height: 20px; }
+
+nav a {
+  color: #ffffff; }
+
+/*FIXME: input goes to?*/
 input {
-  width: 400px;
+  width: 300px;
   padding: 5px;
   font-size: 16px; }
+
+/*Landing Page*/
+.signin form,
+.signup form {
+  width: 415px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto; }
+  .signin form div,
+  .signup form div {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .signin form label,
+  .signup form label {
+    display: inline-block;
+    width: 100px; }
+  .signin form .submitBtn,
+  .signup form .submitBtn {
+    text-align: center; }
+    .signin form .submitBtn input,
+    .signup form .submitBtn input {
+      display: inline-block;
+      width: 125px;
+      font-family: "Courier New"; }
+
+.tabBar {
+  width: 415px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto; }
+
+.tab {
+  display: inline-block;
+  padding-right: 5px; }
 
 .message, .error, .success, .alert {
   font-size: 14px;
@@ -31,36 +83,14 @@ input {
 .alert {
   color: yellow; }
 
-nav li {
-  display: inline-block;
-  padding: 0 20px; }
-
-nav ul {
-  float: left; }
-
-nav {
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 10px;
-  color: black;
-  height: 20px; }
-
-nav a {
-  color: black; }
-
-.signin, .signin table {
-  width: 400px;
-  margin: 0 auto; }
-
 .hero {
   text-align: center;
-  color: black;
+  color: #29293d;
   border-radius: 5px;
   width: 700px;
+  padding-left: 50px auto;
   margin: 50px auto;
   padding: 20px; }
-
-.hero h3, .hero h2 {
-  margin: 10px; }
 
 .hero h1 {
   font-size: 40px; }
