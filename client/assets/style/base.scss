@@ -1,7 +1,7 @@
 @import 'reset';
 @import url(https://fonts.googleapis.com/css?family=Lora:400,700);
-$primary-color: #333;
-$primary-font-color: #29293d;
+$search-input-color: #333;
+$primary-font-color: #cccccc;
 $error-color: red;
 $success-color: green;
 $alert-color: yellow;
@@ -11,21 +11,23 @@ $segment: $input-width+$label-width+15px;
 $primary-font: 'Lora', Arial, serif;
 $secondary-font: Arial;
 
-*{
+
+* {
   font-family: $primary-font;
-  // font-family: Tahoma;
+  color: $primary-font-color;
 }
-body {
-  background-image: url('/assets/shattered.png');
-  // background-size: cover;
-  // background-repeat: no-repeat;
+html {
+  background: url('/assets/drawnLibrary.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /*Navigation Bar*/
 nav{
   background-color: rgba(0, 0, 0, 0.7);
   padding: 10px;
-  color: #ffffff;
   height: 20px;
 
   li{
@@ -38,13 +40,12 @@ nav{
   .logout{
     float: right;
   }
-} 
+}
 /*
 nav{
   background-color: #F0F8FF;
 }*/
 nav a{
- color: #ffffff;
  text-decoration: none;
  cursor: pointer;
 }
@@ -54,6 +55,7 @@ input{
   width: 300px;
   padding: 5px;
   font-size: 16px;
+  color: $search-input-color;
 }
 
 /*Landing Page*/
@@ -110,7 +112,7 @@ a {
     font-weight: bold;
     text-decoration: none;
   }
-} 
+}
 
 
 .message{
@@ -136,7 +138,6 @@ a {
 
 .hero{
   text-align: center;
-  color: $primary-font-color;
   border-radius: 5px;
   width: 700px;
   padding-left: 50px auto;
@@ -185,3 +186,4 @@ a {
   max-width: 300px;
   text-align: left;
 }
+

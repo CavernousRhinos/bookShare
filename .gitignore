@@ -1,6 +1,9 @@
 node_modules/
 bower_components/
+
+# Logs
 *.log
+
 .sass-cache
 
 dist/
@@ -14,3 +17,11 @@ client/build/bundle.js
 
 .sass-cache/
 
+_.*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+.grunt

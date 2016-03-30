@@ -17,15 +17,10 @@ module.exports = function (app, express) {
     res.redirect('/#/explore');
   });
 
-  // TODO: security admin or currentUser access only for delete
-  // app.delete('/api/users/:id', userController.deleteUser);
   app.use(helpers.decode);
 
-  // TODO: security admin or currentUser access only for delete
-  // app.delete('/api/users/:id', userController.deleteUser);
-
   /*Friend Routes*/
-  app.post('/api/friendRequests', userController.addFriend); //creates a friendRequest
+  app.post('/api/friendRequests', userController.addFriend);
   app.get('/api/friends', userController.viewAllFriends);
   app.get('/api/user/:id', userController.getUser);
   app.get('/api/findFriends/:query', userController.findFriends);
@@ -34,11 +29,12 @@ module.exports = function (app, express) {
   app.post('/api/deleteFriendRequest', userController.deleteFriendRequest);
 
   /*Book Routes*/
-  app.get('/api/friends/:id/books', bookController.viewFriendBooks); // all books belonging to one friend
+  app.get('/api/friends/:id/books', bookController.viewFriendBooks);
   app.post('/api/books', bookController.addBook);
   app.get('/api/books', bookController.viewMyShelf);
   app.delete('/api/books/:id', bookController.deleteBook);
-  app.get('/api/friendsBooks/:id', bookController.viewFriendBook); // one book belonging to one friend
+  app.get('/api/friendsBooks', bookController.viewFriendsBooks);
+  app.get('/api/friendsBooks/:id', bookController.viewFriendBook);
 
   app.post('/api/bookRequest', bookController.makeBookRequest);
   app.post('/api/deleteBookRequest', bookController.deleteBookRequest);

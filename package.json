@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jblza/bookShare.git"
+    "url": "git+https://github.com/CavernousRhinos/bookShare.git"
   },
-  "author": "",
+  "author": "Yasu Flores, Leorina Baybay, Jonathan Blaising",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jblza/bookShare/issues"
+    "url": "https://github.com/CavernousRhinos/bookShare/issues"
   },
-  "homepage": "https://github.com/jblza/bookShare#readme",
+  "homepage": "https://github.com/CavernousRhinos/bookShare#readme",
   "dependencies": {
     "babel-core": "^6.7.2",
     "babel-loader": "^6.2.4",

@@ -50,7 +50,6 @@ module.exports.findFriends = function(req, res){
         }
       ]
     }}).then(function(users){
-      console.log(users);
       users = users.map(function(user) {
         return {
           id: user.id,
@@ -69,7 +68,6 @@ module.exports.getFriendRequests = function(req, res) {
   JOIN Users AS u ON fr.userId = u.id WHERE fr.friendId = ?',
   { replacements: [req.currentUser.id.toString()], type: sequelize.QueryTypes.SELECT })
   .then(function (requests) {
-    console.log(requests);
     res.status(200).json(requests);
   }).catch(function(err) {res.status(500).json(err);});
 };
@@ -93,8 +91,6 @@ module.exports.signIn = function(req, res){
 };
 
 module.exports.addFriend = function(req, res){
-  console.log('REQ BODY IN ADD FRIEND:');
-  console.log(req.body);
   User.findAll({where: {email: req.body.email}})
     .then(function(users){
       FriendRequest.findOrCreate({where: {userId: req.currentUser.id, friendId: users[0].id},
@@ -115,7 +111,6 @@ module.exports.addFriend = function(req, res){
 
 module.exports.acceptFriendRequest = function(req, res) {
   var id = req.body.id;
-  console.log('ACCEPTING REQUEST WITH ID: ' + id);
   FriendRequest.findById(id)
   .then(function (friendRequest) {
     //req.currentUser.addFriend()

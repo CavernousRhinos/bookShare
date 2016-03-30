@@ -7,16 +7,20 @@ ol {
   padding: 0; }
 
 * {
-  font-family: "Lora", Arial, serif; }
+  font-family: "Lora", Arial, serif;
+  color: #cccccc; }
 
-body {
-  background-image: url("/assets/shattered.png"); }
+html {
+  background: url("/assets/drawnLibrary.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
 /*Navigation Bar*/
 nav {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 10px;
-  color: #ffffff;
   height: 20px; }
   nav li {
     display: inline-block;
@@ -31,7 +35,6 @@ nav{
   background-color: #F0F8FF;
 }*/
 nav a {
-  color: #ffffff;
   text-decoration: none;
   cursor: pointer; }
 
@@ -39,7 +42,8 @@ nav a {
 input {
   width: 300px;
   padding: 5px;
-  font-size: 16px; }
+  font-size: 16px;
+  color: #333; }
 
 /*Landing Page*/
 .signin form,
@@ -102,7 +106,6 @@ a {
 
 .hero {
   text-align: center;
-  color: #29293d;
   border-radius: 5px;
   width: 700px;
   padding-left: 50px auto;
