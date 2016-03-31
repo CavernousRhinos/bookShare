@@ -8,7 +8,7 @@ class BookList extends React.Component{
       dots: true,
       infinite: true,
       slidesToShow: 4,
-      slidesToScroll: 1
+      slidesToScroll: 2
     };
   }
   render(){
