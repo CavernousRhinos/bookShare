@@ -1,8 +1,7 @@
 @import 'reset';
 @import url(https://fonts.googleapis.com/css?family=Lora:400,700);
 $search-input-color: #333;
-// $primary-font-color: #343434;
-$primary-font-color: black;
+$primary-font-color: #cccccc;
 $error-color: red;
 $success-color: green;
 $alert-color: yellow;
@@ -18,8 +17,7 @@ $secondary-font: Arial;
   color: $primary-font-color;
 }
 html {
-
-  // background: url('/assets/letters.jpg') no-repeat center center fixed;
+  background: url('/assets/drawnLibrary.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -31,11 +29,7 @@ nav{
   background-color: rgba(0, 0, 0, 0.7);
   padding: 10px;
   height: 20px;
-  a{
-   text-decoration: none;
-   cursor: pointer;
-   color: #DEDEDE;
-  }
+
   li{
     display: inline-block;
     padding: 0 20px;
@@ -47,7 +41,16 @@ nav{
     float: right;
   }
 }
+/*
+nav{
+  background-color: #F0F8FF;
+}*/
+nav a{
+ text-decoration: none;
+ cursor: pointer;
+}
 
+/*FIXME: input goes to?*/
 input{
   width: 300px;
   padding: 5px;
@@ -100,50 +103,17 @@ a {
   width: $segment;
   text-align: center;
   margin: 20px auto 20px auto;
-  .first{
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-  }
-  .last{
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
-  .button {
-    background: #dbdbdb;
-    padding: 5px 10px;
-    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-    box-shadow: rgba(0,0,0,1) 0 1px 0;
-    text-shadow: rgba(0,0,0,.4) 0 1px 0;
-    color: #262626;
-    font-size: 14px;
-    font-family: Georgia, serif;
-    text-decoration: none;
-    vertical-align: middle;
-  }
-  .button:hover {
-     border-top-color: #4f4f4f;
-     background: #4f4f4f;
-     color: #ccc;
-     }
-  .button:active {
-     border-top-color: #4d4e73;
-     background: #4d4e73;
-     }
 }
 
 .tab {
   display: inline-block;
-  padding: 0px;
+  padding: 0 20px;
   .active {
     font-weight: bold;
     text-decoration: none;
   }
 }
 
-li {
-  list-style: none;
-}
 
 .message{
   font-size: 14px;
@@ -174,10 +144,10 @@ li {
   padding-left: 50px auto;
   margin: 50px auto;
   padding: 20px;
-  h1{
-    font-size: 40px;
-    margin-top: 15px;
-  }
+}
+
+.hero h1{
+  font-size: 40px;
 }
 
 .book-entry{
@@ -191,9 +161,6 @@ li {
   display: inline-block;
   vertical-align: middle;
   position: relative;
-  img{
-    box-shadow: 0px 3px 5px #888888;
-  }
 }
 
 .owner-button{
@@ -202,6 +169,9 @@ li {
   width: 100%;
 }
 
+.book-entry img{
+  box-shadow: 0px 3px 5px #888888;
+}
 
 .book-list{
    }
@@ -251,12 +221,7 @@ li {
   }
 }
 
-/* SLICK addons */
-.slick-slider .slick-track, .slick-slider .slick-list {
-  background-color: rgba(210,210,210, 0.3);
-  border-radius: 3px;
-}
-
 .people img{
   border-radius: 50%;
 }
+
