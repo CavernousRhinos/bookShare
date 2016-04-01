@@ -8,9 +8,10 @@ ol {
 
 * {
   font-family: "Lora", Arial, serif;
-  color: black; }
+  color: #cccccc; }
 
 html {
+  background: url("/assets/drawnLibrary.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -21,10 +22,6 @@ nav {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 10px;
   height: 20px; }
-  nav a {
-    text-decoration: none;
-    cursor: pointer;
-    color: #DEDEDE; }
   nav li {
     display: inline-block;
     padding: 0 20px; }
@@ -33,6 +30,15 @@ nav {
   nav .logout {
     float: right; }
 
+/*
+nav{
+  background-color: #F0F8FF;
+}*/
+nav a {
+  text-decoration: none;
+  cursor: pointer; }
+
+/*FIXME: input goes to?*/
 input {
   width: 300px;
   padding: 5px;
@@ -76,41 +82,13 @@ a {
   width: 415px;
   text-align: center;
   margin: 20px auto 20px auto; }
-  .tab-bar .first {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px; }
-  .tab-bar .last {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px; }
-  .tab-bar .button {
-    background: #dbdbdb;
-    padding: 5px 10px;
-    -webkit-box-shadow: black 0 1px 0;
-    -moz-box-shadow: black 0 1px 0;
-    box-shadow: black 0 1px 0;
-    text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
-    color: #262626;
-    font-size: 14px;
-    font-family: Georgia, serif;
-    text-decoration: none;
-    vertical-align: middle; }
-  .tab-bar .button:hover {
-    border-top-color: #4f4f4f;
-    background: #4f4f4f;
-    color: #ccc; }
-  .tab-bar .button:active {
-    border-top-color: #4d4e73;
-    background: #4d4e73; }
 
 .tab {
   display: inline-block;
-  padding: 0px; }
+  padding: 0 20px; }
   .tab .active {
     font-weight: bold;
     text-decoration: none; }
-
-li {
-  list-style: none; }
 
 .message, .error, .success, .alert {
   font-size: 14px;
@@ -134,9 +112,9 @@ li {
   padding-left: 50px auto;
   margin: 50px auto;
   padding: 20px; }
-  .hero h1 {
-    font-size: 40px;
-    margin-top: 15px; }
+
+.hero h1 {
+  font-size: 40px; }
 
 .book-entry {
   width: 250px;
@@ -149,13 +127,14 @@ li {
   display: inline-block;
   vertical-align: middle;
   position: relative; }
-  .book-entry img {
-    box-shadow: 0px 3px 5px #888888; }
 
 .owner-button {
   position: absolute;
   bottom: 10px;
   width: 100%; }
+
+.book-entry img {
+  box-shadow: 0px 3px 5px #888888; }
 
 .my-books preloader {
   width: 40px; }
@@ -173,7 +152,7 @@ li {
   text-align: left; }
 
 .hero .about {
-  background-color: black; }
+  background-color: #cccccc; }
 
 .people div {
   display: inline-block;
@@ -192,10 +171,5 @@ li {
   .userSearch li .userName,
   .friends li .userName {
     display: block; }
-
-/* SLICK addons */
-.slick-slider .slick-track, .slick-slider .slick-list {
-  background-color: rgba(210, 210, 210, 0.3);
-  border-radius: 3px; }
 
 /*# sourceMappingURL=style.css.map */
