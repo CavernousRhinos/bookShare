@@ -1,0 +1,175 @@
+@import url(https://fonts.googleapis.com/css?family=Lora:400,700);
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0; }
+
+* {
+  font-family: "Lora", Arial, serif;
+  color: #cccccc; }
+
+html {
+  background: url("/assets/drawnLibrary.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+/*Navigation Bar*/
+nav {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  height: 20px; }
+  nav li {
+    display: inline-block;
+    padding: 0 20px; }
+  nav ul {
+    float: left; }
+  nav .logout {
+    float: right; }
+
+/*
+nav{
+  background-color: #F0F8FF;
+}*/
+nav a {
+  text-decoration: none;
+  cursor: pointer; }
+
+/*FIXME: input goes to?*/
+input {
+  width: 300px;
+  padding: 5px;
+  font-size: 16px;
+  color: #333; }
+
+/*Landing Page*/
+.signin form,
+.signup form {
+  width: 415px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto; }
+  .signin form div,
+  .signup form div {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .signin form label,
+  .signup form label {
+    display: inline-block;
+    font-weight: bold;
+    width: 100px; }
+  .signin form .submitBtn,
+  .signup form .submitBtn {
+    text-align: center; }
+    .signin form .submitBtn input,
+    .signup form .submitBtn input {
+      display: inline-block;
+      width: 125px;
+      font-family: Arial; }
+
+a {
+  text-decoration: none; }
+
+.innerDiv {
+  padding: 30px;
+  padding-top: 15px;
+  text-align: center; }
+
+.tab-bar {
+  width: 415px;
+  text-align: center;
+  margin: 20px auto 20px auto; }
+
+.tab {
+  display: inline-block;
+  padding: 0 20px; }
+  .tab .active {
+    font-weight: bold;
+    text-decoration: none; }
+
+.message, .error, .success, .alert {
+  font-size: 14px;
+  margin: 0px;
+  padding: 0px; }
+
+.error {
+  color: red; }
+
+.success {
+  color: green; }
+
+.alert {
+  color: yellow; }
+
+.hero {
+  background-color: rgba(239, 239, 239, 0.9);
+  text-align: center;
+  border-radius: 5px;
+  width: 700px;
+  padding-left: 50px auto;
+  margin: 50px auto;
+  padding: 20px; }
+
+.hero h1 {
+  font-size: 40px; }
+
+.book-entry {
+  width: 250px;
+  height: 300px;
+  box-shadow: 0px 3px 5px #888888;
+  background: #F7F7F7;
+  padding: 5px;
+  margin: 7px;
+  border-radius: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative; }
+
+.owner-button {
+  position: absolute;
+  bottom: 10px;
+  width: 100%; }
+
+.book-entry img {
+  box-shadow: 0px 3px 5px #888888; }
+
+.my-books preloader {
+  width: 40px; }
+
+.requests-list li {
+  width: 250px; }
+
+.requests-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+
+.__react_component_tooltip > div {
+  max-width: 300px;
+  text-align: left; }
+
+.hero .about {
+  background-color: #cccccc; }
+
+.people div {
+  display: inline-block;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 25px;
+  margin: 25px; }
+
+.userSearch li,
+.friends li {
+  display: inline-block;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5px;
+  margin: 5px; }
+  .userSearch li .userName,
+  .friends li .userName {
+    display: block; }
+
+/*# sourceMappingURL=style.css.map */
