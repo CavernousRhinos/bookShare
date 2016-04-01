@@ -31,7 +31,6 @@ export const BookListEntry = class BooksListEntry extends React.Component{
           "<p>" + this.formatDescription() + "</p>" +
         "</div>"
       } data-html="true" />
-      <ReactTooltip />
       <div className="owner-button">
         <p>{this.props.genre}</p>
         {this.props.borrower ?
@@ -49,6 +48,7 @@ export const BookListEntry = class BooksListEntry extends React.Component{
         }>Borrow book</button> : null }
        </div>
      </div>
+      <ReactTooltip effect="solid" place="bottom"/>
     </div>;
   }
 }

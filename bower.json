@@ -17,6 +17,5 @@
     "jquery": "~2.2.0",
     "lodash": "~4.0.0",
     "react-router": "^2.0.1",
-    "slick-carousel": "^1.5.9"
-  }
+      }
 }
