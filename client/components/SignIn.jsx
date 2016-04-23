@@ -49,6 +49,7 @@ export const SignIn = class SignIn extends React.Component {
           this.setState({username: '', password: ''});
         } }type="submit" value="Sign in"/>
       </div>
+      <a href="/login/facebook">Login with Facebook</a>
       <div className="loader">
       {this.props.loadingSignIn ? <Preloader/> : null }
       </div>
