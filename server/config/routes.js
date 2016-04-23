@@ -2,6 +2,7 @@ var helpers = require('./helpers.js');
 var passport = require('passport');
 var userController = require('../controllers/userController.js');
 var bookController = require('../controllers/bookController.js');
+// var facebook = require('../config/facebook.js');
 
 module.exports = function (app, express) {
   /*User Routes*/
@@ -10,12 +11,17 @@ module.exports = function (app, express) {
 
   //TODO: set up routes for viewing friendBooks
   /*Facebook Login Routes*/
-  app.get('/login/facebook', passport.authenticate('facebook'));
-  app.get('/login/facebook/return',
-  passport.authenticate('facebook', { failureRedirect: '/#/signIn' }),
-  function(req, res) {
-    res.redirect('/#/explore');
-  });
+  // Redirect the user to Facebook for authentication.  When complete,
+  // Facebook will redirect the user back to the application at
+  //     /auth/facebook/callback
+  app.get('/login/facebook', passport.authenticate('facebook', {scope: 'email'}) );
+
+  // Facebook will redirect the user to this URL after approval.  Finish the
+  // authentication process by attempting to obtain an access token.  If
+  // access was granted, the user will be logged in.  Otherwise,
+  // authentication has failed.
+  app.get('/auth/facebook/callback',
+    passport.authenticate('facebook', { successRedirect: '/', failureRedirect: '/#/signIn' }));
 
   app.use(helpers.decode);
 

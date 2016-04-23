@@ -25,3 +25,5 @@ pids
 *.seed
 
 .grunt
+
+server/config/config.json
