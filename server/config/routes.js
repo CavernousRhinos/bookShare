@@ -10,12 +10,13 @@ module.exports = function (app, express) {
 
   //TODO: set up routes for viewing friendBooks
   /*Facebook Login Routes*/
-  app.get('/login/facebook', passport.authenticate('facebook'));
+  app.get('/login/facebook', passport.authenticate('facebook', {scope: 'email'}));
   app.get('/login/facebook/return',
-  passport.authenticate('facebook', { failureRedirect: '/#/signIn' }),
-  function(req, res) {
-    res.redirect('/#/explore');
-  });
+  // passport.authenticate('facebook', { failureRedirect: '/#/signIn' }), Y
+  passport.authenticate('facebook', { successRedirect: '/', failureRedirect: '/#/signIn' }),
+  // function(req, res) { Y
+  //   res.redirect('/#/explore');
+  // });
 
   app.use(helpers.decode);
 
